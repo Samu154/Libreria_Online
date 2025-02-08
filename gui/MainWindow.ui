@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowTitle">
+   <string>Libreria Online</string>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <!-- Barra di ricerca e tasto Salva -->
+    <item>
+     <layout class="QHBoxLayout" name="topLayout">
+      <item>
+       <widget class="QLineEdit" name="searchLineEdit">
+        <property name="placeholderText">
+         <string>Ricerca...</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="saveButton">
+        <property name="text">
+         <string>Salva</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <!-- Pulsanti filtri -->
+    <item>
+     <layout class="QHBoxLayout" name="filterLayout">
+      <item>
+       <widget class="QPushButton" name="btnTutto">
+        <property name="text">
+         <string>Tutto</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnLibri">
+        <property name="text">
+         <string>Libri</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnFilm">
+        <property name="text">
+         <string>Film</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnSerieTV">
+        <property name="text">
+         <string>Serie TV</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <!-- Area di visualizzazione del prodotto -->
+    <item>
+     <layout class="QHBoxLayout" name="displayLayout">
+      <item>
+       <widget class="QFrame" name="productViewFrame">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayoutProduct">
+         <item>
+          <widget class="QLabel" name="productTitleLabel">
+           <property name="text">
+            <string>Prodotto</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="detailsFrame">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayoutDetails">
+         <item>
+          <widget class="QLabel" name="detailsLabel">
+           <property name="text">
+            <string>Dettagli</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <!-- Pulsanti in basso -->
+    <item>
+     <layout class="QHBoxLayout" name="bottomLayout">
+      <item>
+       <widget class="QPushButton" name="editButton">
+        <property name="text">
+         <string>Modifica</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="deleteButton">
+        <property name="text">
+         <string>Cancella</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="addButton">
+        <property name="text">
+         <string>+</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

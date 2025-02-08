@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DialogMedia</class>
+ <widget class="QDialog" name="DialogMedia">
+  <property name="windowTitle">
+   <string>Modifica/Creazione Media</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+    <!-- Selezione del tipo di media -->
+    <item>
+      <widget class="QComboBox" name="mediaTypeComboBox"/>
+    </item>
+    <!-- Campi comuni -->
+    <item>
+      <layout class="QFormLayout" name="formLayoutCommon">
+        <item row="0" column="0">
+          <widget class="QLabel" name="labelTitle">
+            <property name="text">
+              <string>Titolo:</string>
+            </property>
+          </widget>
+        </item>
+        <item row="0" column="1">
+          <widget class="QLineEdit" name="titleLineEdit"/>
+        </item>
+        <item row="1" column="0">
+          <widget class="QLabel" name="labelGenre">
+            <property name="text">
+              <string>Genere:</string>
+            </property>
+          </widget>
+        </item>
+        <item row="1" column="1">
+          <widget class="QLineEdit" name="genreLineEdit"/>
+        </item>
+        <item row="2" column="0">
+          <widget class="QLabel" name="labelReleaseYear">
+            <property name="text">
+              <string>Anno:</string>
+            </property>
+          </widget>
+        </item>
+        <item row="2" column="1">
+          <widget class="QSpinBox" name="releaseYearSpinBox">
+            <property name="minimum">
+              <number>1900</number>
+            </property>
+            <property name="maximum">
+              <number>2100</number>
+            </property>
+            <property name="value">
+              <number>2020</number>
+            </property>
+          </widget>
+        </item>
+      </layout>
+    </item>
+    <!-- Campi specifici -->
+    <item>
+      <widget class="QStackedWidget" name="stackedWidget">
+        <!-- Pagina 0: Libro -->
+        <widget class="QWidget" name="pageLibro">
+          <layout class="QFormLayout" name="formLayoutLibro">
+            <item row="0" column="0">
+              <widget class="QLabel" name="labelAuthor">
+                <property name="text">
+                  <string>Autore:</string>
+                </property>
+              </widget>
+            </item>
+            <item row="0" column="1">
+              <widget class="QLineEdit" name="authorLineEdit"/>
+            </item>
+            <item row="1" column="0">
+              <widget class="QLabel" name="labelPageCount">
+                <property name="text">
+                  <string>Pagine:</string>
+                </property>
+              </widget>
+            </item>
+            <item row="1" column="1">
+              <widget class="QSpinBox" name="pageCountSpinBox">
+                <property name="minimum">
+                  <number>1</number>
+                </property>
+                <property name="maximum">
+                  <number>10000</number>
+                </property>
+                <property name="value">
+                  <number>100</number>
+                </property>
+              </widget>
+            </item>
+          </layout>
+        </widget>
+        <!-- Pagina 1: Film -->
+        <widget class="QWidget" name="pageFilm">
+          <layout class="QFormLayout" name="formLayoutFilm">
+            <item row="0" column="0">
+              <widget class="QLabel" name="labelDirector">
+                <property name="text">
+                  <string>Regista:</string>
+                </property>
+              </widget>
+            </item>
+            <item row="0" column="1">
+              <widget class="QLineEdit" name="directorLineEdit"/>
+            </item>
+            <item row="1" column="0">
+              <widget class="QLabel" name="labelDuration">
+                <property name="text">
+                  <string>Durata (min):</string>
+                </property>
+              </widget>
+            </item>
+            <item row="1" column="1">
+              <widget class="QSpinBox" name="durationSpinBox">
+                <property name="minimum">
+                  <number>1</number>
+                </property>
+                <property name="maximum">
+                  <number>500</number>
+                </property>
+                <property name="value">
+                  <number>90</number>
+                </property>
+              </widget>
+            </item>
+          </layout>
+        </widget>
+        <!-- Pagina 2: Serie TV -->
+        <widget class="QWidget" name="pageSerieTV">
+          <layout class="QFormLayout" name="formLayoutSerieTV">
+            <item row="0" column="0">
+              <widget class="QLabel" name="labelSeasons">
+                <property name="text">
+                  <string>Stagioni:</string>
+                </property>
+              </widget>
+            </item>
+            <item row="0" column="1">
+              <widget class="QSpinBox" name="seasonsSpinBox">
+                <property name="minimum">
+                  <number>1</number>
+                </property>
+                <property name="maximum">
+                  <number>100</number>
+                </property>
+                <property name="value">
+                  <number>1</number>
+                </property>
+              </widget>
+            </item>
+            <item row="1" column="0">
+              <widget class="QLabel" name="labelEpisodes">
+                <property name="text">
+                  <string>Episodi:</string>
+                </property>
+              </widget>
+            </item>
+            <item row="1" column="1">
+              <widget class="QSpinBox" name="episodesSpinBox">
+                <property name="minimum">
+                  <number>1</number>
+                </property>
+                <property name="maximum">
+                  <number>1000</number>
+                </property>
+                <property name="value">
+                  <number>10</number>
+                </property>
+              </widget>
+            </item>
+            <item row="2" column="0">
+              <widget class="QLabel" name="labelCreator">
+                <property name="text">
+                  <string>Creatore:</string>
+                </property>
+              </widget>
+            </item>
+            <item row="2" column="1">
+              <widget class="QLineEdit" name="creatorLineEdit"/>
+            </item>
+          </layout>
+        </widget>
+      </widget>
+    </item>
+    <!-- Pulsanti OK e Annulla -->
+    <item>
+      <widget class="QDialogButtonBox" name="buttonBox">
+        <property name="standardButtons">
+          <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+        </property>
+      </widget>
+    </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
