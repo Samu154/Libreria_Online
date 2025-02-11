@@ -1,5 +1,60 @@
 #include "MediaManager.h"
 #include <algorithm>  // Per std::find_if
+#include <QFile>
+#include <QJsonDocument>
+#include <QJsonArray>
+#include "PersistenceManager.h"
+
+void MediaManager::loadPredefinedData() { // Carica i dati predefiniti
+    QString filePath = "default_media.json";
+    QFile file(filePath);
+    if (!file.open(QIODevice::ReadOnly)) {
+        qWarning() << "Impossibile aprire il file predefinito:" << filePath;
+        return;
+    }
+
+    QByteArray data = file.readAll(); // Legge tutto il contenuto del file
+    file.close();
+
+    QJsonDocument doc = QJsonDocument::fromJson(data); // Converte il contenuto in un documento JSON
+    if (!doc.isArray()) {
+        qWarning() << "Il file predefinito non contiene un array JSON";
+        return;
+    }
+
+    QJsonArray mediaArray = doc.array(); // Estrae l'array JSON
+
+    // Itera su ogni oggetto e aggiungilo al MediaManager
+    for (int i = 0; i < mediaArray.size(); ++i) {
+        QJsonObject obj = mediaArray[i].toObject();
+        std::string title = obj["title"].toString().toStdString();
+        std::string genre = obj["genre"].toString().toStdString();
+        int releaseYear = obj["releaseYear"].toInt();
+        QString type = obj["type"].toString();
+
+        Media* media = nullptr;
+        if (type == "Libro") {
+            std::string author = obj["author"].toString().toStdString();
+            int pageCount = obj["pageCount"].toInt();
+            media = new Libro(title, genre, releaseYear, author, pageCount);
+        }
+        else if (type == "Serie_TV") {
+            int seasons = obj["seasons"].toInt();
+            int episodes = obj["episodes"].toInt();
+            std::string creator = obj["creator"].toString().toStdString();
+            media = new Serie_TV(title, genre, releaseYear, seasons, episodes, creator);
+        }
+        else if (type == "Film") {
+            std::string director = obj["director"].toString().toStdString();
+            int duration = obj["duration"].toInt();
+            media = new Film(title, genre, releaseYear, director, duration);
+        }
+
+        if (media != nullptr) {
+            addMedia(media);  // addMedia è il metodo del MediaManager per aggiungere un Media
+        }
+    }
+}
 
 // Costruttore: non è necessaria un'inizializzazione particolare qui.
 MediaManager::MediaManager() {

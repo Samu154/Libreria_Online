@@ -67,6 +67,9 @@ public:
 
     void clear();
 
+    // Aggiungi qui la dichiarazione per il caricamento dei dati predefiniti
+    void loadPredefinedData();
+
 private:
     // Contenitore per memorizzare i puntatori ai media.
     std::vector<Media*> mediaList;

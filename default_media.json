@@ -1,0 +1,129 @@
+[
+    {
+      "type": "Libro",
+      "title": "Il signore degli anelli",
+      "genre": "Fantasy",
+      "releaseYear": 1954,
+      "author": "J.R.R. Tolkien",
+      "pageCount": 1216
+    },
+    {
+      "type": "Libro",
+      "title": "1984",
+      "genre": "Distopico",
+      "releaseYear": 1949,
+      "author": "George Orwell",
+      "pageCount": 328
+    },
+    {
+      "type": "Libro",
+      "title": "Harry Potter e la Pietra Filosofale",
+      "genre": "Fantasy",
+      "releaseYear": 1997,
+      "author": "J.K. Rowling",
+      "pageCount": 223
+    },
+    {
+      "type": "Libro",
+      "title": "Il nome della rosa",
+      "genre": "Storico",
+      "releaseYear": 1980,
+      "author": "Umberto Eco",
+      "pageCount": 512
+    },
+    {
+      "type": "Libro",
+      "title": "Dune",
+      "genre": "Fantascienza",
+      "releaseYear": 1965,
+      "author": "Frank Herbert",
+      "pageCount": 412
+    },
+
+    {
+      "type": "Film",
+      "title": "Inception",
+      "genre": "Sci-Fi",
+      "releaseYear": 2010,
+      "director": "Christopher Nolan",
+      "duration": 148
+    },
+    {
+      "type": "Film",
+      "title": "Il Padrino",
+      "genre": "Crime",
+      "releaseYear": 1972,
+      "director": "Francis Ford Coppola",
+      "duration": 175
+    },
+    {
+      "type": "Film",
+      "title": "Matrix",
+      "genre": "Sci-Fi",
+      "releaseYear": 1999,
+      "director": "The Wachowskis",
+      "duration": 136
+    },
+    {
+      "type": "Film",
+      "title": "Pulp Fiction",
+      "genre": "Crime",
+      "releaseYear": 1994,
+      "director": "Quentin Tarantino",
+      "duration": 154
+    },
+    {
+      "type": "Film",
+      "title": "Interstellar",
+      "genre": "Sci-Fi",
+      "releaseYear": 2014,
+      "director": "Christopher Nolan",
+      "duration": 169
+    },
+
+    {
+      "type": "Serie_TV",
+      "title": "Breaking Bad",
+      "genre": "Crime",
+      "releaseYear": 2008,
+      "seasons": 5,
+      "episodes": 62,
+      "creator": "Vince Gilligan"
+    },
+    {
+      "type": "Serie_TV",
+      "title": "Game of Thrones",
+      "genre": "Fantasy",
+      "releaseYear": 2011,
+      "seasons": 8,
+      "episodes": 73,
+      "creator": "David Benioff & D.B. Weiss"
+    },
+    {
+      "type": "Serie_TV",
+      "title": "The Mandalorian",
+      "genre": "Sci-Fi",
+      "releaseYear": 2019,
+      "seasons": 2,
+      "episodes": 16,
+      "creator": "Jon Favreau"
+    },
+    {
+      "type": "Serie_TV",
+      "title": "Stranger Things",
+      "genre": "Sci-Fi",
+      "releaseYear": 2016,
+      "seasons": 4,
+      "episodes": 34,
+      "creator": "The Duffer Brothers"
+    },
+    {
+      "type": "Serie_TV",
+      "title": "Sherlock",
+      "genre": "Crime",
+      "releaseYear": 2010,
+      "seasons": 4,
+      "episodes": 13,
+      "creator": "Mark Gatiss & Steven Moffat"
+    }
+]
