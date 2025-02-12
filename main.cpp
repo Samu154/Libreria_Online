@@ -1,4 +1,4 @@
-#include <QtWidgets/QApplication>
+#include <QApplication>
 #include "gui/MainWindow.h" 
 #include "model/MediaManager.h"
 
