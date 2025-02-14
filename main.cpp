@@ -1,6 +1,6 @@
 #include <QApplication>
-#include "gui/MainWindow.h" 
-#include "model/MediaManager.h"
+#include "MainWindow.h" 
+#include "MediaManager.h"
 
 int main(int argc, char *argv[])
 {

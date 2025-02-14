@@ -3,7 +3,7 @@
 #include <QFile>
 #include <QJsonDocument>
 #include <QJsonArray>
-#include "persistence/PersistenceManager.h"
+#include "PersistenceManager.h"
 
 void MediaManager::loadPredefinedData() { // Carica i dati predefiniti
     QString filePath = "default_media.json";
