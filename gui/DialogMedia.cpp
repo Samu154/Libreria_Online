@@ -2,7 +2,7 @@
 #include "ui_DialogMedia.h"
 
 // Include delle classi concrete
-#include "Libri.h"
+#include "Libreria_Online/model/Libri.h"
 #include "Film.h"
 #include "Serie_TV.h"
 
