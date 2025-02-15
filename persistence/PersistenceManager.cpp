@@ -8,7 +8,7 @@
 #include <QXmlStreamWriter>
 #include <QXmlStreamReader>
 
-// Include delle classi concrete (assicurati che i percorsi siano corretti)
+// Include delle classi concrete
 #include "Libri.h"
 #include "Film.h"
 #include "Serie_TV.h"
