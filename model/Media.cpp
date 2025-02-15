@@ -3,9 +3,7 @@
 // Implementazione del costruttore
 Media::Media(const std::string &title, const std::string &genre, int releaseYear)
     : title(title), genre(genre), releaseYear(releaseYear)
-{
-    // Eventuali inizializzazioni aggiuntive possono essere inserite qui
-}
+{}
 
 // Distruttore virtuale
 Media::~Media() {}

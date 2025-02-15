@@ -4,9 +4,7 @@
 Serie_TV::Serie_TV(const std::string &title, const std::string &genre, int releaseYear,
                    int seasons, int episodes, const std::string &creator)
     : Media(title, genre, releaseYear), seasons(seasons), episodes(episodes), creator(creator)
-{
-    // Eventuali inizializzazioni aggiuntive specifiche per Serie_TV possono essere inserite qui
-}
+{}
 
 //Distruttore virtuale
 Serie_TV::~Serie_TV() {}

@@ -13,13 +13,9 @@
 #include "Film.h"
 #include "Serie_TV.h"
 
-PersistenceManager::PersistenceManager() {
-    // Costruttore vuoto; eventuali inizializzazioni future possono essere aggiunte qui.
-}
+PersistenceManager::PersistenceManager() {}
 
-PersistenceManager::~PersistenceManager() {
-    // Distruttore: eventuali pulizie se necessarie.
-}
+PersistenceManager::~PersistenceManager() {}
 
 // -----------------------
 // Salvataggio in JSON

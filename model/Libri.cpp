@@ -4,9 +4,7 @@
 Libri::Libri(const std::string &title, const std::string &genre, int releaseYear,
              const std::string &author, int pageCount)
     : Media(title, genre, releaseYear), author(author), pageCount(pageCount)
-{
-    // Eventuali inizializzazioni aggiuntive specifiche per Libri possono essere inserite qui
-}
+{}
 
 // Distruttore virtuale
 Libri::~Libri() {}

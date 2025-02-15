@@ -4,9 +4,7 @@
 Film::Film(const std::string &title, const std::string &genre, int releaseYear,
            int duration, const std::string &director)
     : Media(title, genre, releaseYear), duration(duration), director(director)
-{
-    // Eventuali inizializzazioni aggiuntive specifiche per Film possono essere inserite qui
-}
+{}
 
 // Distruttore virtuale
 Film::~Film() {}

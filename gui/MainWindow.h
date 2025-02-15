@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "MediaManager.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -26,6 +27,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    MediaManager mediaManager;
 };
 
 #endif

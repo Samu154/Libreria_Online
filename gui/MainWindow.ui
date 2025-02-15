@@ -67,6 +67,10 @@
       </item>
      </layout>
     </item>
+    <!-- Aggiunta del QListWidget per mostrare i risultati della ricerca -->
+    <item>
+      <widget class="QListWidget" name="resultsListWidget"/>
+    </item>
     <!-- Area di visualizzazione del prodotto -->
     <item>
      <layout class="QHBoxLayout" name="displayLayout">
