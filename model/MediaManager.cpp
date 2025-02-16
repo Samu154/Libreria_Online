@@ -33,10 +33,10 @@ void MediaManager::loadPredefinedData() { // Carica i dati predefiniti
         QString type = obj["type"].toString();
 
         Media* media = nullptr;
-        if (type == "Libro") {
+        if (type == "Libri") {
             std::string author = obj["author"].toString().toStdString();
             int pageCount = obj["pageCount"].toInt();
-            media = new Libro(title, genre, releaseYear, author, pageCount);
+            media = new Libri(title, genre, releaseYear, author, pageCount);
         }
         else if (type == "Serie_TV") {
             int seasons = obj["seasons"].toInt();
