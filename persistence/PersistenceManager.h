@@ -3,7 +3,7 @@
 
 #include <vector>
 #include <QString>
-#include "Media.h"
+#include "model/Media.h"
 
 /**
 La classe PersistenceManager gestisce il salvataggio e il caricamento dei media.

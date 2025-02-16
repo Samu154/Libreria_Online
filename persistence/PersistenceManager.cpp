@@ -9,9 +9,9 @@
 #include <QXmlStreamReader>
 
 // Include delle classi concrete
-#include "Libri.h"
-#include "Film.h"
-#include "Serie_TV.h"
+#include "model/Libri.h"
+#include "model/Film.h"
+#include "model/Serie_TV.h"
 
 PersistenceManager::PersistenceManager() {}
 
@@ -31,8 +31,8 @@ bool PersistenceManager::saveToJson(const QString &filePath, const std::vector<M
         mediaObject["releaseYear"] = media->getReleaseYear();
 
         // Determiniamo il tipo concreto con dynamic_cast
-        if (Libro* libro = dynamic_cast<Libro*>(media)) {
-            mediaObject["type"] = "Libro";
+        if (Libri* libro = dynamic_cast<Libri*>(media)) {
+            mediaObject["type"] = "Libri";
             mediaObject["author"] = QString::fromStdString(libro->getAuthor());
             mediaObject["pageCount"] = libro->getPageCount();
         }
@@ -92,10 +92,10 @@ bool PersistenceManager::loadFromJson(const QString &filePath, std::vector<Media
         QString type = obj["type"].toString();
 
         Media* media = nullptr;
-        if (type == "Libro") {
+        if (type == "Libri") {
             std::string author = obj["author"].toString().toStdString();
             int pageCount = obj["pageCount"].toInt();
-            media = new Libro(title, genre, releaseYear, author, pageCount);
+            media = new Libri(title, genre, releaseYear, author, pageCount);
         }
         else if (type == "Serie_TV") {
             int seasons = obj["seasons"].toInt();
@@ -134,8 +134,8 @@ bool PersistenceManager::saveToXml(const QString &filePath, const std::vector<Me
         xmlWriter.writeTextElement("Genre", QString::fromStdString(media->getGenre()));
         xmlWriter.writeTextElement("ReleaseYear", QString::number(media->getReleaseYear()));
 
-        if (Libro* libro = dynamic_cast<Libro*>(media)) {
-            xmlWriter.writeTextElement("Type", "Libro");
+        if (Libri* libro = dynamic_cast<Libri*>(media)) {
+            xmlWriter.writeTextElement("Type", "Libri");
             xmlWriter.writeTextElement("Author", QString::fromStdString(libro->getAuthor()));
             xmlWriter.writeTextElement("PageCount", QString::number(libro->getPageCount()));
         }
@@ -223,8 +223,8 @@ bool PersistenceManager::loadFromXml(const QString &filePath, std::vector<Media*
             }
 
             Media* media = nullptr;
-            if (type == "Libro") {
-                media = new Libro(title.toStdString(), genre.toStdString(), releaseYear,
+            if (type == "Libri") {
+                media = new Libri(title.toStdString(), genre.toStdString(), releaseYear,
                                   author.toStdString(), pageCount);
             }
             else if (type == "Serie_TV") {

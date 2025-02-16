@@ -2,7 +2,7 @@
 #define DIALOGMEDIA_H
 
 #include <QDialog>
-#include "Media.h"
+#include "model/Media.h"
 
 namespace Ui {
 class DialogMedia;

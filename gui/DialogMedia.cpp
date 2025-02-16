@@ -2,9 +2,9 @@
 #include "ui_DialogMedia.h"
 
 // Include delle classi concrete
-#include "Libri.h"
-#include "Film.h"
-#include "Serie_TV.h"
+#include "model/Libri.h"
+#include "model/Film.h"
+#include "model/Serie_TV.h"
 
 DialogMedia::DialogMedia(QWidget *parent) :
     QDialog(parent),
@@ -13,9 +13,9 @@ DialogMedia::DialogMedia(QWidget *parent) :
     ui->setupUi(this);
 
     // Imposta gli elementi del combobox per selezionare il tipo di media
-    ui->mediaTypeComboBox->addItem("Libro");
+    ui->mediaTypeComboBox->addItem("Libri");
     ui->mediaTypeComboBox->addItem("Film");
-    ui->mediaTypeComboBox->addItem("Serie TV");
+    ui->mediaTypeComboBox->addItem("Serie_TV");
 
     // Mostra la pagina corretta nello stacked widget in base al tipo
     connect(ui->mediaTypeComboBox, SIGNAL(currentIndexChanged(int)),
@@ -45,7 +45,7 @@ Media* DialogMedia::getMedia() const
         case 0: { // Libro
             std::string author = ui->authorLineEdit->text().toStdString();
             int pageCount = ui->pageCountSpinBox->value();
-            media = new Libro(title, genre, releaseYear, author, pageCount);
+            media = new Libri(title, genre, releaseYear, author, pageCount);
             break;
         }
         case 1: { // Film

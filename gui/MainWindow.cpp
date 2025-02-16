@@ -4,7 +4,7 @@
 #include <QDebug>
 #include <QListWidget>
 #include "DialogMedia.h"
-#include "PersistenceManager.h"
+#include "persistence/PersistenceManager.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
